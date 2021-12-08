@@ -2,7 +2,6 @@ import React, { useState, useEffect} from "react";
 import './rating.css';
 
 export default function Rating(props) {
-    // let stars = [];
     const [stars, setStars] = useState([]);
     let star = '☆';
     
@@ -26,7 +25,6 @@ export default function Rating(props) {
         console.log('index', index);
         let filledStar = '★'
         let stars = [];
-        // setStars([])
 
         console.log('setStars', stars);
 
@@ -66,11 +64,3 @@ export default function Rating(props) {
     )
 
 }
-
-
-
-// function setStars(stars) {
-//     console.log('stars', stars)
-    
-//     return stars;
-// }

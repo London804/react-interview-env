@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Sort from './routes/Sort'
+import Home from './routes/Home'
 import {  NavLink } from "react-router-dom";
 
 
@@ -22,13 +23,18 @@ function App() {
 
             <main className="app__body">
                 <Routes>
-                    {/* <Route path="/home" element={<Products />} /> */}
+                    <Route
+                        path="/home"
+                        element={<Home />}
+                    />
+                    
                     <Route
                         path="/sort"
                         element={<Sort  />}
                     />
                    
                 </Routes>
+
             </main>
 
         </div>
