@@ -1,11 +1,9 @@
 const getCards = () => {
     return fetch('https://deck-indol.vercel.app/api?type=card')
         .then(response => response.json())
-        .catch(handleError)
-
 };
 
-function handleError(error) {
+const handleError = (error) => {
     if (error.data) {
         return error.data;
     }
@@ -13,5 +11,6 @@ function handleError(error) {
 }
 
 export const apiEndpoints = {
-    getCards
+    getCards,
+    handleError
 };

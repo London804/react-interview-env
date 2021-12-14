@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { apiEndpoints } from "../services/api/endpoints";
+import { apiEndpoints} from "../services/api/endpoints";
 
 export default function Api() {
     const [cards, setCards] = useState([]);
@@ -13,8 +13,11 @@ export default function Api() {
                 let response = res;
                 console.log('response', response);
                 setCards(response);
-            });
+            }).catch(error  => {
+                apiEndpoints.handleError(error)
 
+                }
+            )
     }
 
 
