@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import Sort from './routes/Sort'
-import Home from './routes/Home'
+import Sort from './routes/Sort';
+import Home from './routes/Home';
+import Api from './routes/Api';
 import {  NavLink } from "react-router-dom";
 
 
@@ -18,6 +19,9 @@ function App() {
                     <NavLink to="/sort">
                         Sort
                     </NavLink>
+                    <NavLink to="/api">
+                        APIs
+                    </NavLink>
                 </nav>
             </header>
 
@@ -31,6 +35,11 @@ function App() {
                     <Route
                         path="/sort"
                         element={<Sort  />}
+                    />
+
+                    <Route
+                        path="/API"
+                        element={<Api />}
                     />
                    
                 </Routes>
